@@ -3,6 +3,25 @@
 <head>
 <title>GIT HUB TEST</title>
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#hide-me").click(function() {
+			$(".box").hide(1000);
+		});
+		$("#show-me").click(function() {
+			$(".box").show(1000);
+		});
+		$("#toggle-me").click(function() {
+			$(".box").toggle(1000);
+		});	
+		$("#colour-me").click(function() {
+			$(".box").css("background":"blue");
+		});			
+		
+		
+	});
+
+</script>
 <style>
 	body {
 		font-family:"Helvetica Neue", Helvetica, Arial, San-Serif;
@@ -18,9 +37,14 @@
 <body>
 <h1>Github Test</h1>
 <ul>
-	<li>Hide</li>
-	<li>Show</li>
-	<li>Toggle</li>
+	<li id="hide-me"><strong>Hide:</strong> $(".box") .hide(1000);</li>
+	<li id="show-me"><strong>Show:</strong> $(".box") .show(1000);</li>
+	<li id="toggle-me"><strong>Toggle:</strong> $(".box") .toggle(1000);</li>
+	<li><strong>slide Up:</strong> $(".box") .slideup(1000);</li>
+	<li><strong>slide Down:</strong> $(".box") .slidedown(1000);</li>
+	<li><strong>slide Toggle:</strong> $(".box") .slidetoggle(1000);</li>
+	<li id="colour-me"><strong>Color:</strong> $(".box") .css("background":"blue";);</li>
+	
 </ul>
 <div class="box"></div>
 </body>
